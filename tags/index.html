@@ -21,14 +21,16 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="不要香菜">
-<meta property="og:url" content="http://example.com/archives/2021/09/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://example.com/tags/index.html">
 <meta property="og:site_name" content="不要香菜">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-09-14T20:00:05.000Z">
+<meta property="article:modified_time" content="2021-09-14T20:00:42.579Z">
 <meta property="article:author" content="hhye225">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2021/09/">
+<link rel="canonical" href="http://example.com/tags/">
 
 
 <script id="page-configurations">
@@ -41,7 +43,8 @@
   };
 </script>
 
-  <title>歸檔 | 不要香菜</title>
+  <title>tags | 不要香菜
+</title>
   
 
 
@@ -150,57 +153,56 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content archive">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="zh-TW">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">tags
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共有 1 篇文章。 繼續努力。</span>
-      </div>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-15T02:58:34+08:00"
-              content="2021-09-15">
-          09-15
-        </time>
+      
+      
+      <div class="post-body">
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+              沒有標籤
+            </div>
+            <div class="tag-cloud-tags">
+              
+            </div>
+          </div>
+        
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/" itemprop="url">
-            <span itemprop="name">2001. Number of Pairs of Interchangeable Rectangles</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+      
+      
     </div>
-  </div>
-  
-  
-  
+    
 
-  
-
+    
+    
+    
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -345,6 +347,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '73f152043c4410a6db5b',
+      clientSecret: '3c07b8d9d8ec594bbfe906e03c537cbb49f2e81a',
+      repo        : 'hhye-git.github.io',
+      owner       : 'hhye-git',
+      admin       : ['hhye-git'],
+      id          : 'f47af1d1eda4d807b02bba32be15120b',
+        language: 'zh-TW',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
