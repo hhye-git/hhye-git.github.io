@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HS World</title>
+  <title>不要香菜</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-07T08:43:57.652Z</updated>
+  <updated>2021-09-14T19:00:51.948Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2001. Number of Pairs of Interchangeable Rectangles</title>
+    <link href="http://example.com/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/"/>
+    <id>http://example.com/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/</id>
+    <published>2021-09-14T18:58:34.000Z</published>
+    <updated>2021-09-14T19:00:51.948Z</updated>
+    
+    <content type="html"><![CDATA[<p>解1.<br>    import java.math.BigInteger;</p><pre><code>class Solution &#123;    public long interchangeableRectangles(int[][] rectangles) &#123;        long count = 0;        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();        for (int[] rectangle : rectangles) &#123;            int gcd = BigInteger.valueOf(rectangle[0]).gcd(BigInteger.valueOf(rectangle[1])).intValue();            String key = rectangle[0] / gcd + &quot; &quot; + rectangle[1] / gcd;            count += map.getOrDefault(key, 0);            map.put(key, 1 + map.getOrDefault(key, 0));        &#125;        return count;    &#125;&#125;</code></pre><p>解2.<br>    class Solution {<br>        public long interchangeableRectangles(int[][] rectangles) {<br>            Comparator&lt;int[]&gt; c = new Comparator&lt;int[]&gt;(){<br>                public int compare(int[] a, int[] b){<br>                    return Long.compare((long)a[0] * b[1], (long)b[0] * a[1]);<br>                }<br>            };<br>            Arrays.sort(rectangles, c);<br>            int times = 0;<br>            long ans = 0;<br>            for(int i = 0; i &lt; rectangles.length; i++){<br>                if(i != rectangles.length-1 &amp;&amp; c.compare(rectangles[i], rectangles[i+1]) == 0){<br>                    times++;<br>                    ans += times;<br>                }<br>                else{<br>                    times = 0;<br>                }<br>            }<br>            return ans;<br>        }<br>    }</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;解1.&lt;br&gt;    import java.math.BigInteger;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution &amp;#123;
+
+    public long interchangeableRectangles(int[][] rectangle</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>markdown test</title>
+    <link href="http://example.com/2021/01/12/markdown-test/"/>
+    <id>http://example.com/2021/01/12/markdown-test/</id>
+    <published>2021-01-12T07:13:15.000Z</published>
+    <updated>2021-01-12T07:22:37.153Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="level-1-title"><a href="#level-1-title" class="headerlink" title="level 1 title"></a>level 1 title</h1><h2 id="level-2-title"><a href="#level-2-title" class="headerlink" title="level 2 title"></a>level 2 title</h2><blockquote><p>區塊引言<br>2<br>3</p><p>4</p></blockquote><blockquote><p>This is a blockquote with two paragrphs.<br>and …</p></blockquote><blockquote><p>second<br>and … 2</p></blockquote><blockquote><p>one</p><blockquote><p>inner</p></blockquote><p>two</p></blockquote><ol><li>first list item.</li><li>second list item.</li></ol><ul><li><p>A list item with a blockquote:</p><blockquote><p>This is a blockquote<br>inside a list item.</p></blockquote></li></ul><p>2021. year</p><pre><code>&lt;div class=&quot;footer&quot;&gt;    &amp;copy; 2004 Foo Corporation&lt;/div&gt;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;level-1-title&quot;&gt;&lt;a href=&quot;#level-1-title&quot; class=&quot;headerlink&quot; title=&quot;level 1 title&quot;&gt;&lt;/a&gt;level 1 title&lt;/h1&gt;&lt;h2 id=&quot;level-2-title&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

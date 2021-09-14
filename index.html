@@ -21,9 +21,9 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="HS World">
+<meta property="og:title" content="不要香菜">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="HS World">
+<meta property="og:site_name" content="不要香菜">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="hhye225">
 <meta name="twitter:card" content="summary">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>HS World</title>
+  <title>不要香菜</title>
   
 
 
@@ -72,7 +72,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="HS World" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="不要香菜" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -93,7 +93,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">HS World</h1>
+      <h1 class="site-title">不要香菜</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -146,6 +146,170 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hhye225">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不要香菜">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/" class="post-title-link" itemprop="url">2001. Number of Pairs of Interchangeable Rectangles</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-09-15 02:58:34 / 修改時間：03:00:51" itemprop="dateCreated datePublished" datetime="2021-09-15T02:58:34+08:00">2021-09-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>解1.<br>    import java.math.BigInteger;</p>
+<pre><code>class Solution &#123;
+
+    public long interchangeableRectangles(int[][] rectangles) &#123;
+        long count = 0;
+        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+        for (int[] rectangle : rectangles) &#123;
+            int gcd = BigInteger.valueOf(rectangle[0]).gcd(BigInteger.valueOf(rectangle[1])).intValue();
+            String key = rectangle[0] / gcd + &quot; &quot; + rectangle[1] / gcd;
+            count += map.getOrDefault(key, 0);
+            map.put(key, 1 + map.getOrDefault(key, 0));
+        &#125;
+        return count;
+    &#125;
+&#125;</code></pre>
+<p>解2.<br>    class Solution {<br>        public long interchangeableRectangles(int[][] rectangles) {<br>            Comparator&lt;int[]&gt; c = new Comparator&lt;int[]&gt;(){<br>                public int compare(int[] a, int[] b){<br>                    return Long.compare((long)a[0] * b[1], (long)b[0] * a[1]);<br>                }<br>            };<br>            Arrays.sort(rectangles, c);<br>            int times = 0;<br>            long ans = 0;<br>            for(int i = 0; i &lt; rectangles.length; i++){<br>                if(i != rectangles.length-1 &amp;&amp; c.compare(rectangles[i], rectangles[i+1]) == 0){<br>                    times++;<br>                    ans += times;<br>                }<br>                else{<br>                    times = 0;<br>                }<br>            }<br>            return ans;<br>        }<br>    }</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/12/markdown-test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hhye225">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不要香菜">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/12/markdown-test/" class="post-title-link" itemprop="url">markdown test</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-12 15:13:15 / 修改時間：15:22:37" itemprop="dateCreated datePublished" datetime="2021-01-12T15:13:15+08:00">2021-01-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="level-1-title"><a href="#level-1-title" class="headerlink" title="level 1 title"></a>level 1 title</h1><h2 id="level-2-title"><a href="#level-2-title" class="headerlink" title="level 2 title"></a>level 2 title</h2><blockquote>
+<p>區塊引言<br>2<br>3</p>
+<p>4</p>
+</blockquote>
+<blockquote>
+<p>This is a blockquote with two paragrphs.<br>and …</p>
+</blockquote>
+<blockquote>
+<p>second<br>and … 2</p>
+</blockquote>
+<blockquote>
+<p>one</p>
+<blockquote>
+<p>inner</p>
+</blockquote>
+<p>two</p>
+</blockquote>
+<ol>
+<li>first list item.</li>
+<li>second list item.</li>
+</ol>
+<ul>
+<li><p>A list item with a blockquote:</p>
+<blockquote>
+<p>This is a blockquote<br>inside a list item.</p>
+</blockquote>
+</li>
+</ul>
+<p>2021. year</p>
+<pre><code>&lt;div class=&quot;footer&quot;&gt;
+    &amp;copy; 2004 Foo Corporation
+&lt;/div&gt;</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/07/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -155,7 +319,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HS World">
+      <meta itemprop="name" content="不要香菜">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -274,7 +438,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

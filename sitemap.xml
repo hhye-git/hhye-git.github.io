@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/</loc>
+    
+    <lastmod>2021-09-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/01/12/markdown-test/</loc>
+    
+    <lastmod>2021-01-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/01/07/hello-world/</loc>
     
     <lastmod>2021-01-07</lastmod>
@@ -11,7 +25,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-01-12</lastmod>
+    <lastmod>2021-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
