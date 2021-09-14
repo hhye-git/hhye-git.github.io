@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-09-15 02:58:34 / 修改時間：03:00:51" itemprop="dateCreated datePublished" datetime="2021-09-15T02:58:34+08:00">2021-09-15</time>
+              <time title="創建時間：2021-09-15 02:58:34 / 修改時間：03:08:34" itemprop="dateCreated datePublished" datetime="2021-09-15T02:58:34+08:00">2021-09-15</time>
             </span>
 
           
@@ -185,179 +185,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>解1.<br>    import java.math.BigInteger;</p>
-<pre><code>class Solution &#123;
-
-    public long interchangeableRectangles(int[][] rectangles) &#123;
-        long count = 0;
-        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-        for (int[] rectangle : rectangles) &#123;
-            int gcd = BigInteger.valueOf(rectangle[0]).gcd(BigInteger.valueOf(rectangle[1])).intValue();
-            String key = rectangle[0] / gcd + &quot; &quot; + rectangle[1] / gcd;
-            count += map.getOrDefault(key, 0);
-            map.put(key, 1 + map.getOrDefault(key, 0));
-        &#125;
-        return count;
-    &#125;
-&#125;</code></pre>
-<p>解2.<br>    class Solution {<br>        public long interchangeableRectangles(int[][] rectangles) {<br>            Comparator&lt;int[]&gt; c = new Comparator&lt;int[]&gt;(){<br>                public int compare(int[] a, int[] b){<br>                    return Long.compare((long)a[0] * b[1], (long)b[0] * a[1]);<br>                }<br>            };<br>            Arrays.sort(rectangles, c);<br>            int times = 0;<br>            long ans = 0;<br>            for(int i = 0; i &lt; rectangles.length; i++){<br>                if(i != rectangles.length-1 &amp;&amp; c.compare(rectangles[i], rectangles[i+1]) == 0){<br>                    times++;<br>                    ans += times;<br>                }<br>                else{<br>                    times = 0;<br>                }<br>            }<br>            return ans;<br>        }<br>    }</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/12/markdown-test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hhye225">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="不要香菜">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/12/markdown-test/" class="post-title-link" itemprop="url">markdown test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2021-01-12 15:13:15 / 修改時間：15:22:37" itemprop="dateCreated datePublished" datetime="2021-01-12T15:13:15+08:00">2021-01-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="level-1-title"><a href="#level-1-title" class="headerlink" title="level 1 title"></a>level 1 title</h1><h2 id="level-2-title"><a href="#level-2-title" class="headerlink" title="level 2 title"></a>level 2 title</h2><blockquote>
-<p>區塊引言<br>2<br>3</p>
-<p>4</p>
-</blockquote>
-<blockquote>
-<p>This is a blockquote with two paragrphs.<br>and …</p>
-</blockquote>
-<blockquote>
-<p>second<br>and … 2</p>
-</blockquote>
-<blockquote>
-<p>one</p>
-<blockquote>
-<p>inner</p>
-</blockquote>
-<p>two</p>
-</blockquote>
-<ol>
-<li>first list item.</li>
-<li>second list item.</li>
-</ol>
-<ul>
-<li><p>A list item with a blockquote:</p>
-<blockquote>
-<p>This is a blockquote<br>inside a list item.</p>
-</blockquote>
-</li>
-</ul>
-<p>2021. year</p>
-<pre><code>&lt;div class=&quot;footer&quot;&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/07/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hhye225">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="不要香菜">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/07/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2021-01-07 16:43:57" itemprop="dateCreated datePublished" datetime="2021-01-07T16:43:57+08:00">2021-01-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <p>解1.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">interchangeableRectangles</span><span class="params">(<span class="keyword">int</span>[][] rectangles)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">long</span> count = <span class="number">0</span>;</span><br><span class="line">		HashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span>[] rectangle : rectangles) &#123;</span><br><span class="line">			<span class="keyword">int</span> gcd = BigInteger.valueOf(rectangle[<span class="number">0</span>]).gcd(BigInteger.valueOf(rectangle[<span class="number">1</span>])).intValue();</span><br><span class="line">			String key = rectangle[<span class="number">0</span>] / gcd + <span class="string">&quot; &quot;</span> + rectangle[<span class="number">1</span>] / gcd;</span><br><span class="line">			count += map.getOrDefault(key, <span class="number">0</span>);</span><br><span class="line">			map.put(key, <span class="number">1</span> + map.getOrDefault(key, <span class="number">0</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> count;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解2.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">interchangeableRectangles</span><span class="params">(<span class="keyword">int</span>[][] rectangles)</span> </span>&#123;</span><br><span class="line">		Comparator&lt;<span class="keyword">int</span>[]&gt; c = <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;()&#123;</span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span>[] b)</span></span>&#123;            </span><br><span class="line">				<span class="keyword">return</span> Long.compare((<span class="keyword">long</span>)a[<span class="number">0</span>] * b[<span class="number">1</span>], (<span class="keyword">long</span>)b[<span class="number">0</span>] * a[<span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		Arrays.sort(rectangles, c);</span><br><span class="line">		<span class="keyword">int</span> times = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rectangles.length; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i != rectangles.length-<span class="number">1</span> &amp;&amp; c.compare(rectangles[i], rectangles[i+<span class="number">1</span>]) == <span class="number">0</span>)&#123;</span><br><span class="line">				times++;</span><br><span class="line">				ans += times;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				times = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -438,7 +269,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
