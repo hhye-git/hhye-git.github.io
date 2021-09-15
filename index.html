@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-09-15 23:31:06 / 修改時間：23:37:49" itemprop="dateCreated datePublished" datetime="2021-09-15T23:31:06+08:00">2021-09-15</time>
+              <time title="創建時間：2021-09-15 23:31:06 / 修改時間：23:53:17" itemprop="dateCreated datePublished" datetime="2021-09-15T23:31:06+08:00">2021-09-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +206,14 @@
 
       
           <p>pow的mod版本</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">pow</span><span class="params">(<span class="keyword">long</span> a, <span class="keyword">long</span> n, <span class="keyword">long</span> mod)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> ret = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">63</span> - Long.numberOfLeadingZeros(n);</span><br><span class="line">	<span class="keyword">for</span> (; x &gt;= <span class="number">0</span>; x--) &#123;</span><br><span class="line">		ret = ret * ret % mod;</span><br><span class="line">		<span class="keyword">if</span> (n &lt;&lt; <span class="number">63</span> - x &lt; <span class="number">0</span>) ret = ret * a % mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//usage</span></span><br><span class="line"><span class="keyword">long</span> ans = pow(<span class="number">2</span>, <span class="number">1</span>&lt;&lt;<span class="number">11</span>, (<span class="keyword">int</span>)<span class="number">1e9</span>+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/15/pow-function-with-mod/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
