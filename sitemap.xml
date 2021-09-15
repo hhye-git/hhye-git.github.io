@@ -11,7 +11,7 @@
   <url>
     <loc>http://example.com/2021/09/15/2001-Number-of-Pairs-of-Interchangeable-Rectangles/</loc>
     
-    <lastmod>2021-09-14</lastmod>
+    <lastmod>2021-09-15</lastmod>
     
   </url>
   
@@ -53,6 +53,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/Weekly-contest/</loc>
+    <lastmod>2021-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Java/</loc>
     <lastmod>2021-09-15</lastmod>
     <changefreq>daily</changefreq>
@@ -66,24 +73,17 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://example.com/tags/Weekly-contest/</loc>
-    <lastmod>2021-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
-    <loc>http://example.com/categories/coding-techniques/</loc>
+    <loc>http://example.com/categories/Leetcode/</loc>
     <lastmod>2021-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Leetcode/</loc>
+    <loc>http://example.com/categories/coding-techniques/</loc>
     <lastmod>2021-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
